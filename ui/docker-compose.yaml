@@ -1,0 +1,9 @@
+version: '3'
+services:
+  echo-fe-ui-local:
+    image: registry.cn-beijing.aliyuncs.com/virjar/echo-fe-ui:20210430
+    container_name: echo-fe-ui-local
+    ports:
+      - 8998:80
+    volumes:
+      - ./echo-fe-nginx.conf:/etc/nginx/conf.d/default.conf
